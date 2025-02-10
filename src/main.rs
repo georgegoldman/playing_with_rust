@@ -85,8 +85,31 @@ fn main() {
     
     // let len = calculate_length(&s1);
     // println!("the length of '{}' is '{}'", s1, len);
-    let mut s = String::from("Hello");
-    let new_text = change(&mut s);
+    // let mut s1 = String::from("Hello");
+    // let s2 = s1;
+    // s1 = String::from("value");
+    // println!("{}", s1);
+    // let mut _x = 5;
+    // let  _r = &mut _x;
+    // *_r += 1;
+    
+    // println!("{}", _r);
+}
+
+struct  BankAccount {
+    owner: String,
+    balance: f64
+}
+
+impl BankAccount {
+    fn withdraw(&mut self, amount: f64){
+        println!("Withdrawing {} from account owned by {}", amount, self.owner);
+        self.balance -= amount;
+    }
+
+    fn check_balance(&self){
+        println!("Account owned by {} has a balance of {}", self.owner, self.balance)
+    }
 }
 
 fn temp_convert() -> f32 {
