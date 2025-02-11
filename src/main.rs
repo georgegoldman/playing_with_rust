@@ -1,6 +1,6 @@
 #![allow(warnings)]
 
-use std::vec;
+use std::{collections::{hash_map, HashMap}, vec};
 
 fn main() {
     // let mut input  = String::new();
@@ -184,14 +184,17 @@ fn main() {
 
 // println!("{:?}", _v);
 
-let _v = vec![1,2,3,4,5,6];
+// let _v = vec![1,2,3,4,5,6];
 
-let third = _v.get(2);
-match third {
-    Some (third) => println!("the third element for get is {third}"),
-    None => println!("There is no third element"),
-}
+// let third = _v.get(2);
+// match third {
+//     Some (third) => println!("the third element for get is {third}"),
+//     None => println!("There is no third element"),
+// }
 
+    let mut scores = HashMap::new();
+    scores.insert(String::from("blue"), 10);
+    scores.insert(String::from("yellow"), 50);
 
 }
 
