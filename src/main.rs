@@ -184,6 +184,14 @@ fn main() {
 
 // println!("{:?}", _v);
 
+let _v = vec![1,2,3,4,5,6];
+
+let third = _v.get(2);
+match third {
+    Some (third) => println!("the third element for get is {third}"),
+    None => println!("There is no third element"),
+}
+
 
 }
 
