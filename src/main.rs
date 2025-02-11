@@ -1,4 +1,6 @@
+#![allow(warnings)]
 
+use std::vec;
 
 fn main() {
     // let mut input  = String::new();
@@ -94,7 +96,121 @@ fn main() {
     // *_r += 1;
     
     // println!("{}", _r);
+    // let mut account  = BankAccount{
+    //     owner: "George-Goldman".to_string(),
+    //     balance: 1_000_000_000.0
+    // };
+    // account.withdraw(20.090);
+    // account.check_balance();
+    // let mut a = 5;
+    // println!("the value of a is {}", a);
+    // a = 6;
+    // const Y:i32 = 10;
+    // let x = 5;
+    // let x = x +1;
+    // let x = x +1;
+    // println!("{}", x)
+    // let spaces = "      ";
+    // let spaces = spaces.len();
+    // println!("{}", spaces);
+    // struct Book {
+    //     title: String,
+    //     author: String,
+    //     pages: u32,
+    //     availability: bool,
+    // }
+
+    // struct User {
+    //     active: bool,
+    //     username: String,
+    //     email: String,
+    //     sign_in_count: u64
+    // }
+
+    // let mut user1 = User {
+    //     active: true,
+    //     username: "george-goldman".to_string(),
+    //     email: "george-goldman@email.com".to_string(),
+    //     sign_in_count: 100
+    // };
+
+    // user1.email = String::from("anotheremail@email.com");
+    // // println!("{}", user1.email)
+    // fn build_user(email: String, username: String) -> User {
+    //      User { active: true, username, email, sign_in_count: 1}
+    // }
+
+    // let user2 = User {
+    //     email: String::from("another@m.com"),
+    //     ..user1
+    // };
+    // // println!("{}", user2.active);
+
+    // // tuple struct 
+    // struct Color(i32, i32, i32);
+    // struct Point(i32, i32, i32);
+
+    // // unit struct 
+    // struct AlwaysEqual;
+    // let subject = AlwaysEqual;
+
+    // enum IpAddrKind {
+    //     v4(u8, u8, u8, u8),
+    //     v6(String)
+    // }
+    // let four  = IpAddrKind::v4;
+    // let six  = IpAddrKind::v6;
+
+    // // fn route(ip_kind: IpAddrKind){}
+    // // route(IpAddrKind::v4(String::from("value")));
+    // // route(IpAddrKind::v6(String::from("value")));
+    // let home = IpAddrKind::v4(127,0,0,1);
+    // let loopback = IpAddrKind::v6(String::from("::1"));
+
+    
+
+// let mut _v: Vec<i32> = vec![-2, -1, 0];
+
+// _v.push(1);
+// _v.push(2);
+// _v.push(3);
+// _v.push(4);
+// _v.push(5);
+// _v.push(6);
+// _v.push(7);
+// _v.push(8);
+// _v.push(9);
+// _v.push(10);
+
+// println!("{:?}", _v);
+
+
 }
+
+
+
+
+enum Result<T, E> {
+    Ok(T),
+    Err(E)
+}
+
+
+fn dividOption(numerator: f64, denominator: f64)-> Option<f64>{
+    if denominator == 0.0 {
+        None
+    }else {
+        Some(numerator/denominator)
+    }
+}
+
+// fn divideResult(numerator: f64, denominator: f64) -> Result<f64, String> {
+//     if denominator == 0.0 {
+//         Err("Can not divide by 0".to_string());
+//     } else {
+//          Ok(numerator / denominator)
+//     }
+// }
 
 struct  BankAccount {
     owner: String,
