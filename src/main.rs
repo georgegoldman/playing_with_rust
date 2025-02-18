@@ -192,12 +192,75 @@ fn main() {
 //     None => println!("There is no third element"),
 // }
 
-    let mut scores = HashMap::new();
-    scores.insert(String::from("blue"), 10);
-    scores.insert(String::from("yellow"), 50);
+    // let mut scores = HashMap::new();
+    // scores.insert(String::from("blue"), 10);
+    // scores.insert(String::from("yellow"), 50);
+    // let s1 = String::from("hello");
+    // let s2 = s1.clone();
+
+    // println!("s1 = {s1}, s2 = {s2}"); 
+    // let x = 5;
+    // let y = x;
+
+    // println!("x = {x}, y = {y}");
+
+    // let s1 = give_ownership();
+
+    // let s2 = String::from("Hello");
+
+    // let s3 = take_and_give_back(s2);
+
+    // println!("s1 {s1}, s3 {s3}")
+    // let s1 = String::from("hello");
+    // let len = calculate_length(&s1);
+
+    // println!(" the length of '{s1}' is {len}");
+    // let reference_to_nothing = dangle();
+    // let mut s= "on what is going on?".to_string();
+    // let word = first_word(&s);
+    // s.clear();
+    // let hello = &s[0..5];
+    // let world = &s[6..11];
+    // println!("{hello},{world}")
+    let s = String::from("Hello World");
+
 
 }
 
+fn first_word(s: &String) -> &str {
+    let byte = s.as_bytes();
+
+    for (i, &item) in byte.iter().enumerate(){
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+    &s[..]
+}
+
+// fn dangle() -> &String {
+//     let s = String::from("hello");
+
+//     &s
+// }
+
+fn change(some_string : &mut String) {
+    some_string.push_str(", world");
+}
+
+fn calculate_length(s: &String) -> usize {
+    s.len()
+}
+
+fn give_ownership() -> String {
+    let some_string = String::from("Yours");
+
+    some_string
+}
+
+fn take_and_give_back(a_string: String) -> String {
+    a_string
+}
 
 
 
@@ -308,10 +371,10 @@ fn print_type_of<T>(_: &T) {
     println!("{}", std::any::type_name::<T>())
 }
 
-fn calculate_length(s: &String) -> usize {
-    s.len()
-}
+// fn calculate_length(s: &String) -> usize {
+//     s.len()
+// }
 
-fn change( some_string: &mut String) {
-    some_string.push_str(", world");
-}
+// fn change( some_string: &mut String) {
+//     some_string.push_str(", world");
+// }
